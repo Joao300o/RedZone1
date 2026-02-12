@@ -495,7 +495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Camera
   characterBody: {fileID: 1634878009}
   characterHead: {fileID: 1812622766}
-  sensitivityX: 0.5
+  sensitivityX: 1
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,6 +1313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc659befaf55c8459868a4a24d5afd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TiroJogador
+  dano: 10
 --- !u!1 &1692185235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,6 +1326,7 @@ GameObject:
   - component: {fileID: 1692185238}
   - component: {fileID: 1692185237}
   - component: {fileID: 1692185236}
+  - component: {fileID: 1692185240}
   m_Layer: 6
   m_Name: Inimigo
   m_TagString: Untagged
@@ -1424,6 +1426,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1692185240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692185235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8b0cbff66938db4bb079ae84fdb0778, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VidaInimigo
+  vidaInimigo: 100
 --- !u!1 &1812622765
 GameObject:
   m_ObjectHideFlags: 0
