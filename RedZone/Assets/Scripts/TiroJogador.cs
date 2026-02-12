@@ -4,6 +4,15 @@ public class TiroJogador : MonoBehaviour
 {
     RaycastHit hit;
     public int dano = 10;
+    public int municaoMaxima;
+    public int municaoAtual;
+    public int municaoTotal;
+
+    public float tempoRecarga = 1.75f;
+    bool recarregando = false;
+
+
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
