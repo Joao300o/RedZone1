@@ -2,16 +2,20 @@ using UnityEngine;
 
 public class DanoInimigo : MonoBehaviour
 {
-    public int danoInimigo;
+    public int danoInimigo; // Variavel de dano do Inimigo
+    private float tempodeEspera = 2.0f;
+    private float proximoTempo = 0f;
 
-    void OnTriggerStay(Collider col)
+    void OnTriggerStay(Collider col) // Indentifica quando o Jogador entra na área do trigger
     {
-        if (col.CompareTag("Player"))
+        if (col.CompareTag("Player") && Time.time >= proximoTempo )
         {
-            PlayerVida pv = col.GetComponent<PlayerVida>();
+            PlayerVida pv = col.GetComponentInParent<PlayerVida>();
+
             if (pv != null)
             {
                 pv.ReceberDano(danoInimigo);
+                proximoTempo = tempodeEspera + Time.time;
             }
         }
 
