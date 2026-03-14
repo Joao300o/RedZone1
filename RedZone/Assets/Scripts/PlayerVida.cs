@@ -21,4 +21,9 @@ public Slider vida;
     {
         vida.value -= danoJogador * Time.deltaTime;
     }
+
+    public void Curar(float curar)
+    {
+        vida.value += curar;
+    }
 }
