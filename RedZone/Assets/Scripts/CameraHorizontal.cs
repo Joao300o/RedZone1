@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class CameraHorizontal : MonoBehaviour
 {
     public Transform characterBody; // Corpo do personagem
     public Transform characterHead; // Cabeça do Personagem

@@ -3,29 +3,31 @@ using System.Collections;
 
 public class VidaInimigo : MonoBehaviour
 {
-public int vidaInimigo = 100;
+    public int vidaInimigo = 100;
+    public ArmaJogador armaJogador;
 
-Color corOriginal;
-Renderer rend;
+    Color corOriginal;
+    Renderer rend;
 
-void Start()
+    void Start()
     {
         rend = GetComponent<Renderer>();
         corOriginal = rend.material.color;
     }
- public void TomarDano(int dano)
+    public void TomarDano(int dano)
     {
         vidaInimigo -= dano;
+        StartCoroutine(PiscarDano());
 
         if (vidaInimigo <= 0)
         {
             Morrer();
-            StartCoroutine(PiscarDano());
         }
     }
 
     void Morrer()
     {
+        armaJogador.TrocarDeArma();
         Destroy(gameObject);
     }
 
