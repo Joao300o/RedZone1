@@ -2590,7 +2590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraHorizontal
   characterBody: {fileID: 1634878009}
   characterHead: {fileID: 1812622766}
-  sensitivityX: 2
+  sensitivityX: 1
 --- !u!1 &1692185235
 GameObject:
   m_ObjectHideFlags: 0
