@@ -6,6 +6,11 @@ public class InventarioJogador : MonoBehaviour
   public bool chaveDois = false;
   
   PlayerVida vidaJogador;
+
+  void Start()
+    {
+    vidaJogador = GetComponent<PlayerVida>();
+    }
     public void ColetaItem(TipoItem item)
     {
         switch(item)

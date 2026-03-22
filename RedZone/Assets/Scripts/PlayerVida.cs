@@ -3,27 +3,33 @@ using UnityEngine.UI;
 
 public class PlayerVida : MonoBehaviour
 {
-public Slider vida;
+    int vidaAtual;
+    int vidaMax = 100;
+
+    int danoSofrido;
+
+    [SerializeField] private BarraDeVida barraDeVida;
+
     void Start()
     {
-        vida.value = 100f;
+        vidaAtual = vidaMax;
+
+        barraDeVida.AlterarBarraDeVida(vidaAtual, vidaMax);
     }
 
-    void Update()
+    public void ReceberDano(int danoJogador)
     {
-        if(vida.value <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }   
-    
-     public void ReceberDano(int danoJogador)
-    {
-        vida.value -= danoJogador * Time.deltaTime;
+        vidaAtual -= danoJogador;
+        barraDeVida.AlterarBarraDeVida(vidaAtual, vidaMax);
     }
 
-    public void Curar(float curar)
+    public void Curar(int curar)
     {
-        vida.value += curar;
+        vidaAtual += curar;
+        if (vidaAtual > vidaMax)
+            vidaAtual = vidaMax;
+
+        barraDeVida.AlterarBarraDeVida(vidaAtual, vidaMax);
+
     }
 }
