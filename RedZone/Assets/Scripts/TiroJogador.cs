@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class TiroJogador : MonoBehaviour
 {
@@ -19,8 +20,14 @@ public class TiroJogador : MonoBehaviour
     float proximoTiro;
     bool recarregando = false;
 
+    public TMP_Text meuTexto;
+
     void Update()
     {
+    if (Input.GetKeyDown(KeyCode.R) && municaoAtual < municaoMax && !recarregando)
+        {
+            StartCoroutine(Recarregar());
+        }
         // se estiver recarregando, não faz nada
         if (recarregando) return;
 
@@ -38,6 +45,8 @@ public class TiroJogador : MonoBehaviour
                 StartCoroutine(Recarregar());
             }
         }
+
+        meuTexto.text = municaoAtual.ToString();
     }
 
     void Atirar()
@@ -66,5 +75,12 @@ public class TiroJogador : MonoBehaviour
 
         municaoAtual = municaoMax;
         recarregando = false;
+    }
+
+    public void Municao(int municao)
+    {
+        municaoAtual += municao;
+        if (municaoAtual > municaoMax)
+            municaoAtual = municaoMax;
     }
 }

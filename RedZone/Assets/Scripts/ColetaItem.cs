@@ -3,6 +3,7 @@ using UnityEngine;
 public enum TipoItem
 {
    chaveUm,
+   municaoArma,
    vida,
    chaveDois
 }
