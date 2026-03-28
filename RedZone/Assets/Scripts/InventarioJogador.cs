@@ -12,7 +12,7 @@ public class InventarioJogador : MonoBehaviour
   void Start()
     {
     vidaJogador = GetComponent<PlayerVida>();
-    tiroJogador = GetComponent <TiroJogador>();
+    tiroJogador = GetComponentInChildren<TiroJogador>();
     }
 
     public void ColetaItem(TipoItem item)

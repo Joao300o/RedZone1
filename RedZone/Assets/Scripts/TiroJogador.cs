@@ -63,7 +63,7 @@ public class TiroJogador : MonoBehaviour
 
     void Atirar()
     {
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
 
         if (Physics.Raycast(ray, out hit, 100f))
         {

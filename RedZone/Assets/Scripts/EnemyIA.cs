@@ -3,8 +3,13 @@ using UnityEngine.AI;
 
 public class EnemyIA : MonoBehaviour
 {
-    [SerializeField] private NavMeshAgent enemy;
+    [Header("Referências")]
+    [SerializeField] private NavMeshAgent agent;
     private Transform player;
+
+    [Header("Config")]
+    public float distanciaParar = 2f;
+
     private bool isChasing = false;
 
     void Start()
@@ -14,35 +19,40 @@ public class EnemyIA : MonoBehaviour
 
     void Update()
     {
+        if (!agent.isOnNavMesh) return;
+
+        Debug.Log("Chasing: " + isChasing);
+
         if (isChasing)
         {
-            enemy.SetDestination(player.position);
+            float distancia = Vector3.Distance(transform.position, player.position);
+
+            if (distancia > distanciaParar)
+            {
+                agent.isStopped = false;
+                agent.SetDestination(player.position);
+            }
+            else
+            {
+                PararInimigo();
+            }
         }
     }
 
-    private void OnTriggerEnter(Collider col)
-    {
-        if (col.CompareTag("Player"))
-        {
-            isChasing = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider col)
-    {
-        if (col.CompareTag("Player"))
-        {
-            isChasing = false;
-            enemy.ResetPath();
-        }
-    }
     public void SetChasing(bool value)
     {
         isChasing = value;
 
         if (!value)
         {
-            enemy.ResetPath();
+            PararInimigo();
         }
+    }
+
+    void PararInimigo()
+    {
+        agent.isStopped = true;
+        agent.ResetPath();
+        agent.velocity = Vector3.zero;
     }
 }

@@ -11,6 +11,7 @@ public class ZonaDeteccao : MonoBehaviour
             enemy.SetChasing(true);
         }
     }
+
     private void OnTriggerExit(Collider col)
     {
         if (col.CompareTag("Player"))
