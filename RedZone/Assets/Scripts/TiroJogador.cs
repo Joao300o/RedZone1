@@ -12,10 +12,11 @@ public class TiroJogador : MonoBehaviour
     [Header("Munição")]
     public int municaoAtual = 10;
     public int municaoMax = 10;
+    public int municaoReserva = 30;
 
     [Header("Tempo")]
-    public float cooldown = 0.5f;     // tempo entre tiros
-    public float tempoRecarga = 2f;   // tempo de reload
+    public float cooldown = 0.5f;
+    public float tempoRecarga = 2f;
 
     float proximoTiro;
     bool recarregando = false;
@@ -24,13 +25,22 @@ public class TiroJogador : MonoBehaviour
 
     void Update()
     {
-    if (Input.GetKeyDown(KeyCode.R) && municaoAtual < municaoMax && !recarregando)
+        // Atualiza HUD
+        meuTexto.text = municaoAtual + " / " + municaoReserva;
+
+        // Recarregar manual
+        if (Input.GetKeyDown(KeyCode.R) &&
+            municaoAtual < municaoMax &&
+            municaoReserva > 0 &&
+            !recarregando)
         {
             StartCoroutine(Recarregar());
         }
-        // se estiver recarregando, não faz nada
+
+        // Se estiver recarregando, não pode atirar
         if (recarregando) return;
 
+        // Atirar
         if (Input.GetMouseButtonDown(0) && Time.time >= proximoTiro)
         {
             if (municaoAtual > 0)
@@ -40,13 +50,15 @@ public class TiroJogador : MonoBehaviour
 
                 proximoTiro = Time.time + cooldown;
             }
-            else
+            else if (municaoReserva > 0 && !recarregando)
             {
                 StartCoroutine(Recarregar());
             }
+            else
+            {
+                Debug.Log("Sem munição!");
+            }
         }
-
-        meuTexto.text = municaoAtual.ToString();
     }
 
     void Atirar()
@@ -73,14 +85,24 @@ public class TiroJogador : MonoBehaviour
 
         yield return new WaitForSeconds(tempoRecarga);
 
-        municaoAtual = municaoMax;
+        int balasNecessarias = municaoMax - municaoAtual;
+
+        if (municaoReserva >= balasNecessarias)
+        {
+            municaoAtual = municaoMax;
+            municaoReserva -= balasNecessarias;
+        }
+        else
+        {
+            municaoAtual += municaoReserva;
+            municaoReserva = 0;
+        }
+
         recarregando = false;
     }
 
     public void Municao(int municao)
     {
-        municaoAtual += municao;
-        if (municaoAtual > municaoMax)
-            municaoAtual = municaoMax;
+        municaoReserva += municao;
     }
 }
