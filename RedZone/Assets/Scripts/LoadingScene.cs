@@ -2,37 +2,24 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
+using System.Net.Http.Headers;
+using System;
 
 public class LoadingScene : MonoBehaviour
 {
-    public static string proximaCena;
-    public Slider barra;
-
-    void Start()
+    public void CarregarNovaCena(string nomeDaNovaCena)
     {
-        StartCoroutine(CarregarCena());
+        StartCoroutine(CarregarNovaCenaEmSegundoPlano(nomeDaNovaCena));
     }
 
-    IEnumerator CarregarCena()
+    private IEnumerator CarregarNovaCenaEmSegundoPlano(string nomeDaNovaCena)
     {
-        AsyncOperation operacao = SceneManager.LoadSceneAsync(proximaCena);
+        AsyncOperation carregamento = SceneManager.LoadSceneAsync(nomeDaNovaCena);
 
-        operacao.allowSceneActivation = false;
-
-        while (!operacao.isDone)
+        while (!carregamento.isDone)
         {
-            float progresso = Mathf.Clamp01(operacao.progress / 0.9f);
+            float progressoDoCarregamento = carregamento.progress;
 
-            barra.value = progresso;
-
-            if (operacao.progress >= 0.9f)
-            {
-                barra.value = 1f;
-
-                yield return new WaitForSeconds(0.5f);
-
-                operacao.allowSceneActivation = true;
-            }
 
             yield return null;
         }

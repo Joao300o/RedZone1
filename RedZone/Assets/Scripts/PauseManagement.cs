@@ -45,7 +45,7 @@ public class PauseManagement : MonoBehaviour
 
     public void voltarMenu()
     {
-        LoadingScene.proximaCena = "Menu";
+        LoadingScene.nomeDaNovaCena = "Menu";
         SceneManager.LoadScene(1);
     }
 
