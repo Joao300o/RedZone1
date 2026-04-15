@@ -7,7 +7,7 @@ public class MenuPrincipal : MonoBehaviour
     public GameObject configuracaoPanel;
     public void Jogar()
     {
-        LoadingScene.proximaCena = "Trilha Radioativa";
+      //  LoadingScene.nomeDaNovaCena = "Trilha Radioativa";
         SceneManager.LoadScene(1);
     }
 
