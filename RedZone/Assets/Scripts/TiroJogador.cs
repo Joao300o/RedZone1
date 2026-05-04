@@ -64,12 +64,14 @@ public class TiroJogador : MonoBehaviour
     void Atirar()
     {
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+          
+        int layerMask = LayerMask.GetMask("inimigo");
 
-        if (Physics.Raycast(ray, out hit, 100f))
+        if (Physics.Raycast(ray, out hit, 100f, layerMask))
         {
             Debug.Log(hit.transform.name);
 
-            VidaInimigo inimigo = hit.transform.GetComponent<VidaInimigo>();
+            VidaInimigo inimigo = hit.transform.GetComponentInParent<VidaInimigo>();
 
             if (inimigo != null)
             {
