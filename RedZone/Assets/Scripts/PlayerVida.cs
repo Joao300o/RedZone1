@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class PlayerVida : MonoBehaviour
 {
-    int vidaAtual;
+    public int vidaAtual;
     int vidaMax = 100;
 
     int danoSofrido;
