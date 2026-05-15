@@ -23,6 +23,13 @@ public class TiroJogador : MonoBehaviour
 
     public TMP_Text meuTexto;
 
+    private Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     void Update()
     {
         // Atualiza HUD
@@ -78,6 +85,14 @@ public class TiroJogador : MonoBehaviour
                 inimigo.TomarDano(dano);
             }
         }
+        animator.SetBool("atirando", true);
+
+        Invoke("PararTiro", 0.3f);
+    }
+
+    void PararTiro()
+    {
+        animator.SetBool("atirando", false);
     }
 
     IEnumerator Recarregar()
