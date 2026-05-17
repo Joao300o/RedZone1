@@ -21,8 +21,6 @@ public class EnemyIA : MonoBehaviour
     {
         if (!agent.isOnNavMesh) return;
 
-        Debug.Log("Chasing: " + isChasing);
-
         if (isChasing)
         {
             float distancia = Vector3.Distance(transform.position, player.position);
