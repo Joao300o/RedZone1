@@ -7,8 +7,8 @@ public class MenuPrincipal : MonoBehaviour
     public GameObject configuracaoPanel;
     public void Jogar()
     {
-      //  LoadingScene.nomeDaNovaCena = "Trilha Radioativa";
-        SceneManager.LoadScene(1);
+        LoadingManager.nomeDaNovaCena = "Trilha Radioativa";
+        SceneManager.LoadScene("Loading");
     }
 
     public void AbrirConfiguracao()
