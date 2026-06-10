@@ -48,5 +48,9 @@ public class PlayerMove : MonoBehaviour
         Vector3 finalMove = move + velocity;
 
         controller.Move(finalMove * Time.deltaTime);
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            speed = speed + 3;
+        }
     }
 }

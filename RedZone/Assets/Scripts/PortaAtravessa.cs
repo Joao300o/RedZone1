@@ -21,20 +21,23 @@ public class PortaAtravessa : MonoBehaviour
 
         if (inventario.chaveUm == true)
         {
-            SceneManager.LoadScene(1);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None; 
+            LoadingManager.nomeDaNovaCena = "Menu";
+            SceneManager.LoadScene("Loading");
         }
         else
         {
             StartCoroutine(MostrarAviso("Você precisa da chave do elevador para usá-lo.", 3f));
         }
     }
-     IEnumerator MostrarAviso(string msg, float duracao)
+    IEnumerator MostrarAviso(string msg, float duracao)
     {
         textoAviso.text = msg;
         textoAviso.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(duracao);
-        
+
         textoAviso.gameObject.SetActive(false);
     }
 }
