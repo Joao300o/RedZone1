@@ -12,7 +12,6 @@ public class PortaAtravessa : MonoBehaviour
     void Start()
     {
         inventario = FindAnyObjectByType<InventarioJogador>();
-        textoAviso.gameObject.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)

@@ -4,6 +4,8 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     public float speed = 5f;
+    public float speedSprint = 8f;
+    private float current;
     public float gravity = -20f;
 
     public Transform cameraTransform;
@@ -14,6 +16,7 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        current = speed;
     }
 
     void Update()
@@ -32,9 +35,17 @@ public class PlayerMove : MonoBehaviour
         right.Normalize();
 
         Vector3 direction = (forward * v + right * h).normalized;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            current = speedSprint;
+        }
+        else
+        {
+            current = speed;
+        }
 
         // Movimento horizontal
-        Vector3 move = direction * speed;
+        Vector3 move = direction * current;
 
         // Gravidade simples
         if (controller.isGrounded && velocity.y < 0)
@@ -48,9 +59,6 @@ public class PlayerMove : MonoBehaviour
         Vector3 finalMove = move + velocity;
 
         controller.Move(finalMove * Time.deltaTime);
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            speed = speed + 3;
-        }
+
     }
 }

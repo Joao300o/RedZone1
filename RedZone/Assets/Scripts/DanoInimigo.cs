@@ -3,7 +3,7 @@ using UnityEngine;
 public class DanoInimigo : MonoBehaviour
 {
     public int danoInimigo; // Variavel de dano do Inimigo
-    private float tempodeEspera = 2.0f;
+    public float tempodeEspera = 2.0f;
     private float proximoTempo = 0f;
 
     void OnTriggerStay(Collider col) // Indentifica quando o Jogador entra na área do trigger

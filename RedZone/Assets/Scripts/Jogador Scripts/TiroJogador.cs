@@ -22,8 +22,10 @@ public class TiroJogador : MonoBehaviour
     bool recarregando = false;
 
     public TMP_Text meuTexto;
+    public TMP_Text municaoAviso;
 
     private Animator animator;
+
 
     private void Awake()
     {
@@ -63,7 +65,17 @@ public class TiroJogador : MonoBehaviour
             }
             else
             {
-                Debug.Log("Sem munição!");
+                StartCoroutine(MostrarAviso("Sem munição!", 2.5f));
+            }
+
+            IEnumerator MostrarAviso(string msg, float duracao)
+            {
+                municaoAviso.text = msg;
+                municaoAviso.gameObject.SetActive(true);
+
+                yield return new WaitForSeconds(duracao);
+
+                municaoAviso.gameObject.SetActive(false);
             }
         }
     }
@@ -71,7 +83,7 @@ public class TiroJogador : MonoBehaviour
     void Atirar()
     {
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
-          
+
         int layerMask = LayerMask.GetMask("inimigo");
 
         if (Physics.Raycast(ray, out hit, 100f, layerMask))

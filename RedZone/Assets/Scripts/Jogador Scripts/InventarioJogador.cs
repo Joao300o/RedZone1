@@ -17,7 +17,6 @@ public class InventarioJogador : MonoBehaviour
     {
         vidaJogador = GetComponent<PlayerVida>();
         tiroJogador = GetComponentInChildren<TiroJogador>();
-        possuiChave.gameObject.SetActive(false);
     }
 
     public void ColetaItem(TipoItem item)
@@ -38,7 +37,7 @@ public class InventarioJogador : MonoBehaviour
                 break;
 
             case TipoItem.municaoArma:
-                tiroJogador.Municao(1);
+                tiroJogador.Municao(10);
                 break;
         }
     }
