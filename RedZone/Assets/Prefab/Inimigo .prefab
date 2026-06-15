@@ -53,7 +53,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 15, y: 1, z: 15}
+  m_Size: {x: 17, y: 1, z: 17}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2847098711134673563
 MonoBehaviour:
@@ -134,7 +134,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 3.47, z: 1}
+  m_Size: {x: 3.5, y: 3.47, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4122701631002201451
 MonoBehaviour:
@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DanoInimigo
   danoInimigo: 15
+  tempodeEspera: 2
 --- !u!1 &5106555476824593262
 GameObject:
   m_ObjectHideFlags: 0

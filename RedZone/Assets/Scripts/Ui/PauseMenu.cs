@@ -15,9 +15,13 @@ public class PauseMenu : MonoBehaviour
 
     public Slider sliderVolume;
     public Slider sliderSensi;
-    
+
     public TMP_Text volumeTxt;
     public TMP_Text sensiTxt;
+
+    public TiroJogador[] armas;
+
+    public GameObject mira;
 
     void Start()
     {
@@ -59,10 +63,22 @@ public class PauseMenu : MonoBehaviour
         menuPause.SetActive(false);
         opcoesPanel.SetActive(false);
         Time.timeScale = 1f;
+        mira.SetActive(true);
+
+        foreach (TiroJogador arma in armas)
+        {
+            arma.enabled = true;
+        }
     }
 
     private void ShowPauseMenu()
     {
+        foreach (TiroJogador arma in armas)
+        {
+            arma.enabled = false;
+        }
+
+        mira.SetActive(true);
         cameraHorizontal.enabled = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
@@ -78,6 +94,9 @@ public class PauseMenu : MonoBehaviour
 
     public void GoMainMenu()
     {
+        Time.timeScale = 1f;
+
+
         LoadingManager.nomeDaNovaCena = "Menu";
         SceneManager.LoadScene("Loading");
     }
@@ -99,7 +118,7 @@ public class PauseMenu : MonoBehaviour
     public void SensiManager()
     {
         cameraHorizontal.sensitivityX = sliderSensi.value;
-        
+
         sensiTxt.text = "Sensibilidade: " + sliderSensi.value.ToString("F1");
     }
 
