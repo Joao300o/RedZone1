@@ -1,13 +1,16 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class InventarioJogador : MonoBehaviour
 {
     public bool chaveUm = false;
     public bool chaveDois = false;
 
-    TiroJogador tiroJogador;
+    public TiroJogador[] tiroJogador;
+
+    //TiroJogador tiroJogador;
 
     PlayerVida vidaJogador;
 
@@ -16,7 +19,7 @@ public class InventarioJogador : MonoBehaviour
     void Start()
     {
         vidaJogador = GetComponent<PlayerVida>();
-        tiroJogador = GetComponentInChildren<TiroJogador>();
+        //tiroJogador = GetComponentInChildren<TiroJogador>();
     }
 
     public void ColetaItem(TipoItem item)
@@ -37,7 +40,10 @@ public class InventarioJogador : MonoBehaviour
                 break;
 
             case TipoItem.municaoArma:
-                tiroJogador.Municao(10);
+                foreach (TiroJogador tiro in tiroJogador)
+                {
+                    tiro.Municao(Random.Range(6, 10));
+                }
                 break;
         }
     }
