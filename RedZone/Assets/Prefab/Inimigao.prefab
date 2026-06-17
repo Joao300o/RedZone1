@@ -58,8 +58,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.22, y: 1, z: 0.01}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.22, y: 1.0854262, z: 0.01}
+  m_Center: {x: 0, y: -0.04271339, z: 0}
 --- !u!114 &3353408240915186522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b0cbff66938db4bb079ae84fdb0778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VidaInimigo
-  vidaInimigo: 60
+  vidaInimigo: 70
   armaJogador: {fileID: 0}
   enemyIA: {fileID: 6733940487515993538}
 --- !u!195 &3345805524902999134

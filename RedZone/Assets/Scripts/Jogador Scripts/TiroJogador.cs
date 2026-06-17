@@ -18,6 +18,8 @@ public class TiroJogador : MonoBehaviour
     public float cooldown = 0.5f;
     public float tempoRecarga = 2f;
 
+    public float rangeMax = 100f;
+
     float proximoTiro;
     bool recarregando = false;
 
@@ -86,7 +88,7 @@ public class TiroJogador : MonoBehaviour
 
         int layerMask = LayerMask.GetMask("inimigo");
 
-        if (Physics.Raycast(ray, out hit, 100f, layerMask))
+        if (Physics.Raycast(ray, out hit, rangeMax, layerMask))
         {
             Debug.Log(hit.transform.name);
 

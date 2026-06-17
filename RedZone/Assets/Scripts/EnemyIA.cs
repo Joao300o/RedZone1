@@ -12,7 +12,7 @@ public class EnemyIA : MonoBehaviour
     [Header("Config")]
     public float distanciaParar = 2f;
     public float velocidadeNormal = 8f;
-    public float tempoSlow = 1f;
+    public float tempoSlow = 1.5f;
     public float velocidadeSlow = 4f;
 
     private bool isChasing = false;
