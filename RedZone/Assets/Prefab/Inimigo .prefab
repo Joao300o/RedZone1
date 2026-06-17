@@ -69,6 +69,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyIA
   agent: {fileID: 2183314406575278751}
   distanciaParar: 2
+  velocidadeNormal: 8
+  tempoSlow: 1
+  velocidadeSlow: 3
 --- !u!114 &5929747377728019005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VidaInimigo
   vidaInimigo: 40
   armaJogador: {fileID: 0}
+  enemyIA: {fileID: 2847098711134673563}
 --- !u!195 &2183314406575278751
 NavMeshAgent:
   m_ObjectHideFlags: 0

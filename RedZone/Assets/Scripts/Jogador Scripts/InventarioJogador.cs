@@ -42,7 +42,7 @@ public class InventarioJogador : MonoBehaviour
             case TipoItem.municaoArma:
                 foreach (TiroJogador tiro in tiroJogador)
                 {
-                    tiro.Municao(Random.Range(6, 10));
+                    tiro.Municao(10);
                 }
                 break;
         }

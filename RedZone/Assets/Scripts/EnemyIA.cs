@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
+using NUnit.Framework;
 
 public class EnemyIA : MonoBehaviour
 {
@@ -9,12 +11,17 @@ public class EnemyIA : MonoBehaviour
 
     [Header("Config")]
     public float distanciaParar = 2f;
+    public float velocidadeNormal = 8f;
+    public float tempoSlow = 1f;
+    public float velocidadeSlow = 4f;
 
     private bool isChasing = false;
+    private bool isSlowed = false;
 
     void Start()
     {
         player = GameObject.Find("Player").transform;
+        agent.speed = velocidadeNormal;
     }
 
     void Update()
@@ -36,7 +43,22 @@ public class EnemyIA : MonoBehaviour
             }
         }
     }
+    public void AplicarSlow()
+    { 
+        if(!isSlowed)
+        StartCoroutine(SlowCoroutine());
+    }
 
+    IEnumerator SlowCoroutine()
+    {
+        isSlowed = true;
+        agent.speed = velocidadeSlow;
+
+        yield return new WaitForSeconds(tempoSlow);
+
+        isSlowed = false;
+        agent.speed = velocidadeNormal;
+    }
     public void SetChasing(bool value)
     {
         isChasing = value;
@@ -53,4 +75,5 @@ public class EnemyIA : MonoBehaviour
         agent.ResetPath();
         agent.velocity = Vector3.zero;
     }
+
 }

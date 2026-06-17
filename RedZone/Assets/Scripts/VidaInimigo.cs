@@ -6,6 +6,8 @@ public class VidaInimigo : MonoBehaviour
     public int vidaInimigo = 100;
     public ArmaJogador armaJogador;
 
+    public EnemyIA enemyIA;
+
     Color corOriginal;
     Renderer rend;
 
@@ -13,11 +15,18 @@ public class VidaInimigo : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
         corOriginal = rend.material.color;
+
+        enemyIA = GetComponentInChildren<EnemyIA>();
     }
     public void TomarDano(int dano)
     {
         vidaInimigo -= dano;
         StartCoroutine(PiscarDano());
+
+        if (enemyIA != null)
+        {
+            enemyIA.AplicarSlow();
+        }
 
         if (vidaInimigo <= 0)
         {
