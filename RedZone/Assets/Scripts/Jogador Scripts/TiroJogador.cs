@@ -93,6 +93,8 @@ public class TiroJogador : MonoBehaviour
             Debug.Log(hit.transform.name);
 
             VidaInimigo inimigo = hit.transform.GetComponentInParent<VidaInimigo>();
+            
+            AudioManager.instancia.SomTiro();
 
             if (inimigo != null)
             {
