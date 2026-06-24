@@ -36,6 +36,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
 
         sliderSensi.value = cameraHorizontal.sensitivityX;
+        sliderVolume.value = AudioListener.volume * 100f;
     }
 
     void Update()
@@ -124,6 +125,9 @@ public class PauseMenu : MonoBehaviour
 
     public void VolumeManager()
     {
+        AudioListener.volume = sliderVolume.value / 100f;
+        
+        volumeTxt.text = "Volume: " + sliderVolume.value.ToString("F0");
 
     }
 }

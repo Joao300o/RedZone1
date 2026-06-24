@@ -153,6 +153,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DanoInimigo
   danoInimigo: 15
   tempodeEspera: 2
+  audioManager: {fileID: 0}
+  somHit: {fileID: 8300000, guid: 43fac8a2073f0684583bfed9c7d53341, type: 3}
 --- !u!1 &5106555476824593262
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +240,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 8
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

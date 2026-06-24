@@ -1,10 +1,11 @@
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class AudioManager : MonoBehaviour
 {
-public static AudioManager instancia;
+    [Header("Áudios do jogo")]
     public AudioSource audioSource;
-    public  AudioClip somTiro;
+    public AudioClip coletavel;
 
     public void MudarVolume(float valor)
     {
@@ -13,11 +14,15 @@ public static AudioManager instancia;
 
     private void Awake()
     {
-        instancia = this;
+        audioSource = GetComponent<AudioSource>();
     }
 
-    public void SomTiro(AudioClip clip)
+    public void TocarSom(AudioClip clip, float volume = 1f, float pitch = 1f)
     {
-        audioSource.PlayOneShot(clip);
+        if (clip != null)
+        {
+            audioSource.pitch = pitch;
+            audioSource.PlayOneShot(clip, volume);
+        }
     }
 }

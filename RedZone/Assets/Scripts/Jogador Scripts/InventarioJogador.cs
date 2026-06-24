@@ -10,8 +10,6 @@ public class InventarioJogador : MonoBehaviour
 
     public TiroJogador[] tiroJogador;
 
-    //TiroJogador tiroJogador;
-
     PlayerVida vidaJogador;
 
     public TMP_Text possuiChave;
@@ -19,7 +17,6 @@ public class InventarioJogador : MonoBehaviour
     void Start()
     {
         vidaJogador = GetComponent<PlayerVida>();
-        //tiroJogador = GetComponentInChildren<TiroJogador>();
     }
 
     public void ColetaItem(TipoItem item)

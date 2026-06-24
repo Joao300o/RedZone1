@@ -17,16 +17,27 @@ public class TiroJogador : MonoBehaviour
     [Header("Tempo")]
     public float cooldown = 0.5f;
     public float tempoRecarga = 2f;
-
-    public float rangeMax = 100f;
-
     float proximoTiro;
     bool recarregando = false;
 
+    [Header("Range")]
+    public float rangeMax = 100f;
+
+
+    [Header("Texto")]
     public TMP_Text meuTexto;
     public TMP_Text municaoAviso;
 
+    [Header("Animação")]
     private Animator animator;
+
+    [Header("Som")]
+    public AudioManager audioManager;
+    public AudioClip somTiro;
+    public AudioClip somRecarga;
+    public AudioClip semBala;
+    public float pitch = 1f;
+
 
 
     private void Awake()
@@ -68,6 +79,7 @@ public class TiroJogador : MonoBehaviour
             else
             {
                 StartCoroutine(MostrarAviso("Sem munição!", 2.5f));
+                audioManager.TocarSom(semBala, 1f);
             }
 
             IEnumerator MostrarAviso(string msg, float duracao)
@@ -88,13 +100,15 @@ public class TiroJogador : MonoBehaviour
 
         int layerMask = LayerMask.GetMask("inimigo");
 
+        audioManager.TocarSom(somTiro, 0.4f);
+
         if (Physics.Raycast(ray, out hit, rangeMax, layerMask))
         {
             Debug.Log(hit.transform.name);
 
             VidaInimigo inimigo = hit.transform.GetComponentInParent<VidaInimigo>();
-            
-            AudioManager.instancia.SomTiro();
+
+
 
             if (inimigo != null)
             {
@@ -113,6 +127,7 @@ public class TiroJogador : MonoBehaviour
 
     IEnumerator Recarregar()
     {
+        audioManager.TocarSom(somRecarga, 0.4f, pitch);
         recarregando = true;
         Debug.Log("Recarregando...");
 
