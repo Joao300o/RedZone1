@@ -121,8 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ColetaItem
   tipoItem: 2
   audioManager: {fileID: 0}
-  coleta: {fileID: 0}
-  volume: 0.4
+  coleta: {fileID: 8300000, guid: aff4e6220370fba42baf21efab4c460e, type: 3}
+  volume: 0.6
 --- !u!65 &3653225481403966075
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -301,8 +301,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ColetaItem
   tipoItem: 2
   audioManager: {fileID: 0}
-  coleta: {fileID: 0}
-  volume: 0.4
+  coleta: {fileID: 8300000, guid: aff4e6220370fba42baf21efab4c460e, type: 3}
+  volume: 0.6
 --- !u!65 &3597077239836963059
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -445,8 +445,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ColetaItem
   tipoItem: 2
   audioManager: {fileID: 0}
-  coleta: {fileID: 0}
-  volume: 0.4
+  coleta: {fileID: 8300000, guid: aff4e6220370fba42baf21efab4c460e, type: 3}
+  volume: 0.6
 --- !u!65 &8042397840542931954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -589,8 +589,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ColetaItem
   tipoItem: 2
   audioManager: {fileID: 0}
-  coleta: {fileID: 0}
-  volume: 0.4
+  coleta: {fileID: 8300000, guid: aff4e6220370fba42baf21efab4c460e, type: 3}
+  volume: 0.6
 --- !u!65 &136218202937578648
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -733,8 +733,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ColetaItem
   tipoItem: 2
   audioManager: {fileID: 0}
-  coleta: {fileID: 0}
-  volume: 0.4
+  coleta: {fileID: 8300000, guid: aff4e6220370fba42baf21efab4c460e, type: 3}
+  volume: 0.6
 --- !u!65 &4497733125377986538
 BoxCollider:
   m_ObjectHideFlags: 0

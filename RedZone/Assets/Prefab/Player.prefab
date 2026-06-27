@@ -76,7 +76,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 128
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: a3117cceebdb6e240b71ae62bde5c030, type: 2}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -292,7 +292,14 @@ MonoBehaviour:
   municaoReserva: 40
   cooldown: 0.3
   tempoRecarga: 1.5
+  rangeMax: 27
   meuTexto: {fileID: 0}
+  municaoAviso: {fileID: 0}
+  audioManager: {fileID: 0}
+  somTiro: {fileID: 8300000, guid: 23a514c3e8d79cc43875da092732fb10, type: 3}
+  somRecarga: {fileID: 8300000, guid: 0bea18f8e5a61934d8236a5ec73276e9, type: 3}
+  semBala: {fileID: 8300000, guid: 72f417c1b30e4104c8b9518445c91b57, type: 3}
+  pitch: 1.33
 --- !u!114 &6407334599475122995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,6 +565,7 @@ GameObject:
   - component: {fileID: 5841493120682740325}
   - component: {fileID: 2526712600346846332}
   - component: {fileID: 5322181831891072657}
+  - component: {fileID: 8611135893363043129}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -700,8 +708,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMove
   speed: 5
+  speedSprint: 8
   gravity: -20
   cameraTransform: {fileID: 8496869753686955076}
+  volumeCorrendo: 1
+  volumeAndando: 0.7
+  audioManager: {fileID: 0}
+  andando: {fileID: 8300000, guid: d3a226b27dffcc748a53543bb4a22ae2, type: 3}
+  correndo: {fileID: 8300000, guid: c4d46646a244582429c3fac820dfca3a, type: 3}
 --- !u!114 &5841493120682740325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -730,6 +744,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventarioJogador
   chaveUm: 0
   chaveDois: 0
+  tiroJogador:
+  - {fileID: 9200365793802601925}
+  - {fileID: 3461610924375859143}
   possuiChave: {fileID: 0}
 --- !u!114 &5322181831891072657
 MonoBehaviour:
@@ -747,6 +764,33 @@ MonoBehaviour:
   pistolaSprite: {fileID: 0}
   espingarda: {fileID: 8678212159702240864}
   espingardaSprite: {fileID: 0}
+--- !u!54 &8611135893363043129
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6334906946052177215}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7321644108004110925
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,7 +935,14 @@ MonoBehaviour:
   municaoReserva: 20
   cooldown: 0.8
   tempoRecarga: 2.5
+  rangeMax: 20
   meuTexto: {fileID: 0}
+  municaoAviso: {fileID: 0}
+  audioManager: {fileID: 0}
+  somTiro: {fileID: 8300000, guid: 25effcce37aa12f49a30766b6062856d, type: 3}
+  somRecarga: {fileID: 8300000, guid: b5c44adefedd3da41b46ec5be131d3ba, type: 3}
+  semBala: {fileID: 8300000, guid: 72f417c1b30e4104c8b9518445c91b57, type: 3}
+  pitch: 1.6
 --- !u!114 &4178206528837817577
 MonoBehaviour:
   m_ObjectHideFlags: 0

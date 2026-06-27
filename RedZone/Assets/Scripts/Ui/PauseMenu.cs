@@ -35,13 +35,16 @@ public class PauseMenu : MonoBehaviour
 
         Time.timeScale = 1f;
 
-        sliderSensi.value = cameraHorizontal.sensitivityX;
-        sliderVolume.value = AudioListener.volume * 100f;
+        sliderVolume.value = ConfiguracaoJogo.CarregarVolume();
+        sliderSensi.value = ConfiguracaoJogo.CarregarSensi();
+        AudioListener.volume = sliderVolume.value / 100f;
+        cameraHorizontal.sensitivityX = sliderSensi.value;
+
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !opcoesPanel.activeSelf)
         {
             if (pausado)
                 HidePausedMenu();
@@ -67,17 +70,13 @@ public class PauseMenu : MonoBehaviour
         mira.SetActive(true);
 
         foreach (TiroJogador arma in armas)
-        {
             arma.enabled = true;
-        }
     }
 
     private void ShowPauseMenu()
     {
         foreach (TiroJogador arma in armas)
-        {
             arma.enabled = false;
-        }
 
         mira.SetActive(true);
         cameraHorizontal.enabled = false;
@@ -96,8 +95,6 @@ public class PauseMenu : MonoBehaviour
     public void GoMainMenu()
     {
         Time.timeScale = 1f;
-
-
         LoadingManager.nomeDaNovaCena = "Menu";
         SceneManager.LoadScene("Loading");
     }
@@ -119,15 +116,14 @@ public class PauseMenu : MonoBehaviour
     public void SensiManager()
     {
         cameraHorizontal.sensitivityX = sliderSensi.value;
-
         sensiTxt.text = "Sensibilidade: " + sliderSensi.value.ToString("F1");
+        ConfiguracaoJogo.SalvarSensi(sliderSensi.value);
     }
 
     public void VolumeManager()
     {
         AudioListener.volume = sliderVolume.value / 100f;
-        
         volumeTxt.text = "Volume: " + sliderVolume.value.ToString("F0");
-
+        ConfiguracaoJogo.SalvarVolume(sliderVolume.value);
     }
 }

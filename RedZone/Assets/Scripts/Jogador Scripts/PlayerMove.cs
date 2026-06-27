@@ -13,6 +13,12 @@ public class PlayerMove : MonoBehaviour
     private CharacterController controller;
     private Vector3 velocity;
 
+    public float volumeCorrendo;
+    public float volumeAndando;
+    public AudioManager audioManager;
+    public AudioClip andando;
+    public AudioClip correndo;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -24,41 +30,48 @@ public class PlayerMove : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
-        // Direção baseada na câmera
         Vector3 forward = cameraTransform.forward;
         Vector3 right = cameraTransform.right;
 
         forward.y = 0;
         right.y = 0;
-
         forward.Normalize();
         right.Normalize();
 
         Vector3 direction = (forward * v + right * h).normalized;
-        if (Input.GetKey(KeyCode.LeftShift))
+
+        bool movendo = direction.magnitude > 0 && controller.isGrounded;
+
+        if (movendo)
         {
-            current = speedSprint;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                current = speedSprint;
+                if (audioManager.audioSourcePassos.clip != correndo)
+                    audioManager.PararPassos();
+                audioManager.TocarPassos(correndo, volumeCorrendo, 0.8f);
+            }
+            else
+            {
+                current = speed;
+                if (audioManager.audioSourcePassos.clip != andando)
+                    audioManager.PararPassos();
+                audioManager.TocarPassos(andando, volumeAndando, 1.3f);
+            }
         }
         else
         {
             current = speed;
+            audioManager.PararPassos();
         }
 
-        // Movimento horizontal
         Vector3 move = direction * current;
 
-        // Gravidade simples
         if (controller.isGrounded && velocity.y < 0)
-        {
             velocity.y = -2f;
-        }
 
         velocity.y += gravity * Time.deltaTime;
 
-        // Movimento final
-        Vector3 finalMove = move + velocity;
-
-        controller.Move(finalMove * Time.deltaTime);
-
+        controller.Move((move + velocity) * Time.deltaTime);
     }
 }

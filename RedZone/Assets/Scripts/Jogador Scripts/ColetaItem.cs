@@ -26,7 +26,7 @@ public class ColetaItem : MonoBehaviour
             if (iv != null)
             {
                 iv.ColetaItem(tipoItem);
-                audioManager.TocarSom(coleta, volume);
+                audioManager.TocarSomSecundarios(coleta, volume);
                 Destroy(gameObject);
             }
         }
