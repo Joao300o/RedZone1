@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 02db6babe4f194a43af01d4caaf0990a
+guid: 5848b9da600caae4b83a219cbaaa0adc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1280
+  spritePixelsToUnits: 1048
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: shotgunpadrao_animation_0
+      name: shotgunpadrao_animation (4)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1280
-        height: 1280
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1a8f32ba6c8e2e4687a33dfe1a87173
-      internalID: 1174580003
+      spriteID: 1480ff89fdde2a0469d36c1b62957281
+      internalID: 100624490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgunpadrao_animation_1
+      name: shotgunpadrao_animation (4)_1
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 128
         y: 0
-        width: 1280
-        height: 1280
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6d86c201f8dbf24ebbfede5d1aa0b87
-      internalID: -981568013
+      spriteID: 3f9968fdc9c938f468945722ec6346be
+      internalID: 859556219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgunpadrao_animation_2
+      name: shotgunpadrao_animation (4)_2
       rect:
         serializedVersion: 2
-        x: 2560
+        x: 256
         y: 0
-        width: 1280
-        height: 1280
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 058e408a7c9a0ca4f82f9cf97e3082c2
-      internalID: -1398655373
+      spriteID: 54c1ca8af345c9f4dbc12d98719b31cb
+      internalID: -92604856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgunpadrao_animation_3
+      name: shotgunpadrao_animation (4)_3
       rect:
         serializedVersion: 2
-        x: 3840
+        x: 384
         y: 0
-        width: 1280
-        height: 1280
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1ffd4333ce14cd42a0a1e650008a54d
-      internalID: 1683247603
+      spriteID: 0661e2016a25775439977e193540eec1
+      internalID: -279717462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shotgunpadrao_animation_4
+      name: shotgunpadrao_animation (4)_4
       rect:
         serializedVersion: 2
-        x: 5120
+        x: 512
         y: 0
-        width: 1280
-        height: 1280
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05968b6830534d74ba2a273415cb56c7
-      internalID: -572198787
+      spriteID: d4f4be338cc83b345b01b5499ceb9b5d
+      internalID: -1058414863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shotgunpadrao_animation (4)_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a71bf241bf59b0c43a026755313d2ed2
+      internalID: 902907661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shotgunpadrao_animation (4)_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce39a455ecfa2154dadc9555b39b0de0
+      internalID: -31072192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shotgunpadrao_animation (4)_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0694bf71ede2d324283652d929fb2b01
+      internalID: -787404346
       vertices: []
       indices: 
       edges: []
@@ -210,7 +276,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1a03680e51b02dd4aaaca662c6f98175
+    spriteID: 54c6245619eeb7d4e92253f8ed959819
     internalID: 0
     vertices: []
     indices: 
@@ -220,13 +286,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1280.0,"y":1280.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      shotgunpadrao_animation_0: 1174580003
-      shotgunpadrao_animation_1: -981568013
-      shotgunpadrao_animation_2: -1398655373
-      shotgunpadrao_animation_3: 1683247603
-      shotgunpadrao_animation_4: -572198787
+      shotgunpadrao_animation (4)_0: 100624490
+      shotgunpadrao_animation (4)_1: 859556219
+      shotgunpadrao_animation (4)_2: -92604856
+      shotgunpadrao_animation (4)_3: -279717462
+      shotgunpadrao_animation (4)_4: -1058414863
+      shotgunpadrao_animation (4)_5: 902907661
+      shotgunpadrao_animation (4)_6: -31072192
+      shotgunpadrao_animation (4)_7: -787404346
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

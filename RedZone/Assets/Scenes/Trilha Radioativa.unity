@@ -29731,10 +29731,78 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1204269596355495081, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1460650061, guid: 36781bfad2ee00b498b3245044e1a392, type: 3}
+    - target: {fileID: 1204269596355495081, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1259762579593468740, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371835778592027988, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371835778592027988, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371835778592027988, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1371835778592027988, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561826065344069104, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561826065344069104, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.692632
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561826065344069104, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561826065344069104, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 1561826065344069104, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020828322884477401, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020828322884477401, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: m_Size.y
+      value: 0.62561035
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020828322884477401, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1512204734, guid: d48f6ec9094ab5249a7530804fbb1e2b, type: 3}
+    - target: {fileID: 2020828322884477401, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2526712600346846332, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
       propertyPath: possuiChave
       value: 
       objectReference: {fileID: 1683257590}
+    - target: {fileID: 3461610924375859143, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: numero
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3461610924375859143, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
       propertyPath: meuTexto
       value: 
@@ -29807,6 +29875,14 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 283475526}
+    - target: {fileID: 8678212159702240864, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9200365793802601925, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
+      propertyPath: numero
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9200365793802601925, guid: 3d4fa3269257fba49bba80ad13066d7b, type: 3}
       propertyPath: meuTexto
       value: 

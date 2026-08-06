@@ -38,6 +38,8 @@ public class TiroJogador : MonoBehaviour
     public AudioClip semBala;
     public float pitch = 1f;
 
+    public float numero = 1;
+
 
 
     private void Awake()
@@ -131,6 +133,10 @@ public class TiroJogador : MonoBehaviour
         recarregando = true;
         Debug.Log("Recarregando...");
 
+        animator.SetBool("reload", true);
+
+        Invoke ("PararReload", numero);
+
         yield return new WaitForSeconds(tempoRecarga);
 
         int balasNecessarias = municaoMax - municaoAtual;
@@ -146,7 +152,13 @@ public class TiroJogador : MonoBehaviour
             municaoReserva = 0;
         }
 
+
         recarregando = false;
+    }
+
+        void PararReload()
+    {
+        animator.SetBool("reload", false);
     }
 
     public void Municao(int municao)
