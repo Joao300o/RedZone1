@@ -28352,14 +28352,6 @@ PrefabInstance:
       propertyPath: armaJogador
       value: 
       objectReference: {fileID: 1634878014}
-    - target: {fileID: 3353408240915186522, guid: 7a8a63a1f396d704fae1a94c81fc7a3e, type: 3}
-      propertyPath: vidaInimigo
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 4725455453814116604, guid: 7a8a63a1f396d704fae1a94c81fc7a3e, type: 3}
-      propertyPath: distanciaMax
-      value: 25
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
