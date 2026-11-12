@@ -198,7 +198,7 @@ GameObject:
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1371835778592027988
 Transform:
   m_ObjectHideFlags: 0
@@ -210,7 +210,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.37, y: -0.3, z: 0.8}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 864362399181345013}
   m_Father: {fileID: 5849419709302152464}
@@ -264,12 +264,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1775835681, guid: bb60fcd3bfb018d4abd1ed7805cf7599, type: 3}
+  m_Sprite: {fileID: 1512204734, guid: d48f6ec9094ab5249a7530804fbb1e2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.28, y: 1.28}
+  m_Size: {x: 0.625, y: 0.62561035}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -300,6 +300,7 @@ MonoBehaviour:
   somRecarga: {fileID: 8300000, guid: 0bea18f8e5a61934d8236a5ec73276e9, type: 3}
   semBala: {fileID: 8300000, guid: 72f417c1b30e4104c8b9518445c91b57, type: 3}
   pitch: 1.33
+  numero: 1.5
 --- !u!114 &6407334599475122995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -841,7 +842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1561826065344069104
 Transform:
   m_ObjectHideFlags: 0
@@ -851,9 +852,9 @@ Transform:
   m_GameObject: {fileID: 8678212159702240864}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.42, y: -0.24, z: 0.8}
-  m_LocalScale: {x: 5.7, y: 6.4, z: 5.7}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0.42, y: -0.28, z: 0.8}
+  m_LocalScale: {x: 5.07, y: 5.692632, z: 5.07}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3622601539200367598}
   m_Father: {fileID: 5849419709302152464}
@@ -943,6 +944,7 @@ MonoBehaviour:
   somRecarga: {fileID: 8300000, guid: b5c44adefedd3da41b46ec5be131d3ba, type: 3}
   semBala: {fileID: 8300000, guid: 72f417c1b30e4104c8b9518445c91b57, type: 3}
   pitch: 1.6
+  numero: 2.5
 --- !u!114 &4178206528837817577
 MonoBehaviour:
   m_ObjectHideFlags: 0
